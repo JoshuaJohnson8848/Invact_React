@@ -4,6 +4,8 @@ import './App.css'
 import Home from './components/Home/Home';
 import TopBar from './layouts/TopBar/TopBar';
 import NavBar from './layouts/NavBar/NavBar';
+import AddMovie from './components/AddMovie/AddMovie';
+import MovieView from './components/MovieView/MovieView';
 
 
 function App() {
@@ -13,13 +15,15 @@ function App() {
     <>
       <BrowserRouter>
       <TopBar />
-      <div className='grid grid-cols-8'>
+      <div className='grid grid-cols-12 bg-orange-50'>
         <div className='col-span-2'>
           <NavBar />
         </div>
-        <div className='col-span-6'>
+        <div className='col-span-10 scroll-smooth h-screen overflow-y-auto'>
           <Routes>
             <Route  path='/' element={<Home/>}/>
+            <Route  path='/add' element={<AddMovie/>}/>
+            <Route  path='/view' element={<MovieView/>}/>
           </Routes>
         </div>
       </div>
