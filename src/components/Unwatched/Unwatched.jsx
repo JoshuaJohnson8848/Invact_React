@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieList from '../components/MovieList/MovieList'
+import MovieList from '../MovieList/MovieList'
 import { useNavigate } from 'react-router-dom'
 
 function Unwatched() {
