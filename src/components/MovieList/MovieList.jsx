@@ -34,7 +34,7 @@ function MovieList({ status }) {
 
     const onDelete = async() => {
         const res = await deleteMovie(deleteId)
-        if(res){
+        if(res?.data?.deleted){
             setIsModalOpen(false);
             fetchAllMovies();
         }

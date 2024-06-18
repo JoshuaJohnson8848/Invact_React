@@ -12,8 +12,8 @@ function Modal({ title, isOpen, onClose, onSubmit }) {
                     <h4 className='text-md text-left'>Did you want to {title} the movie ?</h4>
                 </div>
                 <div className='flex flex-row py-4 px-4 justify-end items-end gap-4'>
-                    <button className='bg-red-600 p-2 border rounded-md w-12 text-white' onClick={onClose}>No</button>
-                    <button className='bg-green-600 p-2 border rounded-md w-12 text-white' onClick={onSubmit}>Yes</button>
+                    <button className='hover:bg-red-800 bg-red-600 p-2 border rounded-md w-12 text-white' onClick={onClose}>No</button>
+                    <button className='hover:bg-green-800 bg-green-600 p-2 border rounded-md w-12 text-white' onClick={onSubmit}>Yes</button>
                 </div>
             </div>
         </div>
