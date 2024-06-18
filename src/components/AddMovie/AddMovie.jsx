@@ -55,7 +55,6 @@ function AddMovie() {
 
 
     const handleSubmit = (values, { setSubmitting, resetForm }) => {
-        console.log(values);
         if(isEdit){
           updateMovieData(values)
         } else {
@@ -76,7 +75,6 @@ function AddMovie() {
         image: image ? image : null
       }
 
-      console.log("params",params);
       const res = await updateMovie(params, movieId);
 
       if(res){
@@ -103,8 +101,8 @@ function AddMovie() {
 
   return (
     <>
-        <div className='flex flex-row justify-center items-center h-screen w-full overflow-y-auto my-4'>
-            <div className='flex flex-col w-[650px] h-auto border rounded-xl bg-slate-200 border-slate-400'> 
+        <div className='flex flex-row justify-center items-center min-h-screen w-full overflow-y-auto my-4'>
+            <div className='flex flex-col w-[650px] min-h-full border rounded-xl bg-slate-200 border-slate-400'> 
                 <div className='py-4 px-2'>
                     <h1 className='text-2xl text-center'>{isEdit ? 'Edit' : 'Add'} Movie Form</h1>
                 </div>

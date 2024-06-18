@@ -7,7 +7,7 @@ import { deleteMovie, getAllMovies } from '../../services/MovieServices'
 import { useGlobalContext } from '../../context/GlobalProvider'
 
 
-function MovieList() {
+function MovieList({ status }) {
     const [movies, setMovies] = useState([])
     const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,7 +15,11 @@ function MovieList() {
     const [deleteId, setdDeleteId] = useState('')
 
     useEffect(() => {
-        fetchAllMovies()
+        if(status){
+            fetchAllMovies(status)
+        } else {
+            fetchAllMovies()
+        }
     }, [])
     
 
@@ -36,8 +40,14 @@ function MovieList() {
         }
     }
 
-    const fetchAllMovies = async() => {
-        const res = await getAllMovies();
+    const fetchAllMovies = async(status) => {
+        let res;
+
+        if(status){
+            res = await getAllMovies(status);
+        } else {
+            res = await getAllMovies();
+        }
         setMovies(res);
     }
 

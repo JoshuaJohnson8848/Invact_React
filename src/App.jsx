@@ -8,6 +8,8 @@ import AddMovie from './components/AddMovie/AddMovie';
 import MovieView from './components/MovieView/MovieView';
 import GlobalProvider from './context/GlobalProvider';
 import EditReview from './components/EditReview/EditReview';
+import Unwatched from './components/Unwatched';
+import Watched from './components/Watched/Watched';
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
             <Route  path='/add' element={<AddMovie/>}/>
             <Route  path='/view' element={<MovieView/>}/>
             <Route  path='/review' element={<EditReview/>}/>
+            <Route  path='/unwatched' element={<Unwatched/>}/>
+            <Route  path='/watched' element={<Watched/>}/>
           </Routes>
         </div>
       </div>

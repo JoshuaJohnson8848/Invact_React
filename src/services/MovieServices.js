@@ -1,9 +1,9 @@
 import axios from './AxiosInstance.js';
 
 
-export const getAllMovies = async() => {
+export const getAllMovies = async(status) => {
     try{
-       const res = await axios.get('/');
+       const res = await axios.get(`/?status=${status}`);
        return res?.data?.movies;
 
     } catch(err){
