@@ -6,6 +6,8 @@ import TopBar from './layouts/TopBar/TopBar';
 import NavBar from './layouts/NavBar/NavBar';
 import AddMovie from './components/AddMovie/AddMovie';
 import MovieView from './components/MovieView/MovieView';
+import GlobalProvider from './context/GlobalProvider';
+import EditReview from './components/EditReview/EditReview';
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
 
   return (
     <>
+    <GlobalProvider>
       <BrowserRouter>
       <TopBar />
       <div className='grid grid-cols-12 bg-orange-50'>
@@ -24,10 +27,12 @@ function App() {
             <Route  path='/' element={<Home/>}/>
             <Route  path='/add' element={<AddMovie/>}/>
             <Route  path='/view' element={<MovieView/>}/>
+            <Route  path='/review' element={<EditReview/>}/>
           </Routes>
         </div>
       </div>
       </BrowserRouter>
+    </GlobalProvider>
     </>
   )
 }

@@ -23,7 +23,7 @@ function StarRating({ rating }) {
   return (
     <>
         <div className='flex flex-row justify-start items-start'>
-            {stars}{unfilledStars}
+            {stars}{(unfilledStars.length != 5) ? unfilledStars : 'Not Rated Yet'}
         </div>
     </>
   )
