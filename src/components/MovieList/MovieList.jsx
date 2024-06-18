@@ -66,8 +66,8 @@ function MovieList({ status }) {
             return (
             <div className='w-22 col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 sm:col-span-12 border border-slate-400 rounded-xl bg-slate-200 transition-transform transform hover:scale-105 hover:border-green-600'>
                 <div className='flex flex-col'>
-                    <div className='border border-slate-400 rounded-xl'>
-                        <img className='object-cover w-full h-auto border rounded-xl' src={data.photo} alt="Image" onError={(e) => {e.target.src = '/not-image-available.png'}} />
+                    <div className='h-60 border border-slate-400 rounded-xl overflow-hidden'>
+                        <img className='object-cover w-full h-full' src={data.photo} alt="Image" onError={(e) => {e.target.src = '/not-image-available.png'}} />
                     </div>
                     <div className='flex flex-col justify-start items-start px-2 py-2'>
                         <h1 className='text-start text-2xl pb-1'>{data?.title} | {data?.year}</h1>
